@@ -1,0 +1,76 @@
+$default-color: $theme-red !default;
+$default-box-pos: absolute !default;
+$default-arrow-size: 6px !default;
+$default-box-bdr-width: 1px !default;
+$default-arrow-side-position: left !default;
+
+$default-arrow-border-width: 0 !default; // placeholder. value is calculated based on arrow size and arrow box border width
+
+// Create an arrow using css and psudeo elements
+//
+// The root concept is to create a triangle shape using varrying border widths and colors on the psudeo elements :before and :after
+//
+// Margins of the psudeo elements must be equal to the border width and then multiplied by negative one to keep the arrow border and arrow stacked on top of eachother
+
+
+@mixin arrow-box($bdr-color: $default-color, $pos: $default-box-pos, $arrow-size: $default-arrow-size, $bdr-width: $default-box-bdr-width, $arrow-pos: $default-arrow-side-position) {
+
+// generate colors
+  $bg-color: mix(#fff, $bdr-color, 75%);
+  $text-color: darken($bdr-color, 47%);
+
+// apply styles to container box
+  background: $bg-color;
+  border: $bdr-width solid $bdr-color;
+  color: $text-color;
+  position: $pos;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+
+// position arrow in the middle of specified side
+  &:after, &:before {
+    @if $arrow-pos == "top" {
+      bottom: 100%;
+      left: 50%;
+    }
+    @else if $arrow-pos == "right" {
+      left: 100%;
+      top: 50%;
+    }
+    @else if $arrow-pos == "bottom" {
+      left: 50%;
+      top: 100%;
+    }
+    @else if $arrow-pos == "left" {
+      right: 100%;
+      top: 50%;
+    }
+  }
+
+// set border size of arrow based on specified arrow size and border width
+  @if $arrow-size > 0 {
+    $default-arrow-border-width: $arrow-size + round($bdr-width * 1.41421356);
+  }
+
+  &:after, &:before {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    border-color: rgba($bg-color, 0);
+    border-right-color: $bg-color;
+    border-width: $arrow-size;
+    margin-top: ($arrow-size*(-1));
+  }
+
+  &:before {
+    border-color: rgba($bdr-color, 0);
+    border-right-color: $bdr-color;
+    border-width: $default-arrow-border-width;
+    margin-top: ($default-arrow-border-width*(-1));
+  }
+}
