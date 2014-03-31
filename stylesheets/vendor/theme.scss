@@ -1,0 +1,160 @@
+@import "../partials/base";
+@import "../modules/variables";
+
+
+// ALTER THEME COLORS
+// ven-theme = vendor theme
+
+// COLORS
+$ven-theme-black:   black;
+$ven-theme-white:   white;
+
+$ven-theme-gray-darkest:  #1f1f1f;
+$ven-theme-gray-darker:   #3f3f3f;
+$ven-theme-gray-dark:     #5f5f5f;
+$ven-theme-gray:          #7f7f7f;
+$ven-theme-gray-light:    #9f9f9f;
+$ven-theme-gray-lighter:  #bfbfbf;
+$ven-theme-gray-lightest: #dfdfdf;
+
+$ven-theme-red:     red;
+$ven-theme-blue:    #123048;
+$ven-theme-green:   green;
+$ven-theme-orange:  #FF5F2F;
+$ven-theme-yellow:  #FCC168;
+$ven-theme-purple:  purple;
+
+$ven-theme-caution: $theme-yellow;
+
+$ven-theme-background-main: $theme-gray;
+$ven-theme-background-secondary: $theme-gray-lighter;
+
+
+// TYPE
+$text-color-header: $theme-white;
+$text-color-footer: $theme-white;
+
+
+// LOGOS
+$logo-login: "../../images/logos/conductiv-logo-full.png";
+$logo-dashboard: "../../images/logos/conductiv-logo-full.png";
+$logo-dashboard-size: 100%;
+$logo-dashboard-positioning: center 125px;
+$logo-backdrop: transparent;
+
+@mixin logo-display($image:$logo-dashboard, $background-color:$logo-backdrop, $image-size:$logo-dashboard-size, $image-positioning:$logo-dashboard-positioning) {
+  background: url($image) no-repeat $image-positioning $background-color;
+  background-size: $image-size;
+}
+
+
+// BUTTON COLORS
+$ven-theme-btn-caution-color:              #fff !default;
+$ven-theme-btn-caution-bg:                 $ven-theme-caution !default;
+$ven-theme-btn-caution-border:             darken($ven-theme-caution, 5%) !default;
+
+
+$panel-border: $panel-inverse-heading-border;
+
+
+// ----------------------------------------------------------------------------------------------------
+// BODY and HTML
+// ----------------------------------------------------------------------------------------------------
+body {
+  background: url('../../images/backgrounds/grey_wash_wall.png') $ven-theme-background-main;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+
+// ----------------------------------------------------------------------------------------------------
+// MENUS
+// ----------------------------------------------------------------------------------------------------
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: $static-space;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+
+// ----------------------------------------------------------------------------------------------------
+// FIXED HEADER AND FOOTER
+// ----------------------------------------------------------------------------------------------------
+.navbar-fixed-top {
+
+  .navbar-brand {
+    color: $text-color-header;
+
+    &:hover {
+      color: $text-color-header-hover;
+    }
+  }
+}
+
+
+// ----------------------------------------------------------------------------------------------------
+// PANELS
+// ----------------------------------------------------------------------------------------------------
+.panel {
+  border-color: $panel-border;
+
+  .panel-heading {
+    @include panel-heading-bg();
+  }
+
+}
+
+.panel-body {
+  .label {
+    color: $theme-black;
+  }
+}
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// PANEL ITEMS
+// ----------------------------------------------------------------------------------------------------
+.order-list {
+
+  .order-product-row {
+    border-bottom: 1px solid $theme-black;
+
+    &:only-child {
+      border-bottom: none;
+    }
+
+    &:nth-child(odd) {
+      background: $theme-white;
+    }
+
+    &:nth-child(even) {
+      background: $ven-theme-background-secondary;
+    }
+  }
+
+}
+
+
+// ----------------------------------------------------------------------------------------------------
+// DASHBOARD
+// ----------------------------------------------------------------------------------------------------
+#body-dashboard {
+
+  .container-task-area .panel {
+    @include logo-display();
+    border: none;
+  }
+
+}
+
+
+
+
+
+

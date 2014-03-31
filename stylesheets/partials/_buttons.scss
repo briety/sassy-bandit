@@ -1,0 +1,191 @@
+@import "base";
+
+
+// PLACEHOLDERS
+%btn-half {
+  @extend %grid-12-of-24; // 1/4 of panel
+}
+
+%btn-caution {
+  // Warning appears as yellow
+  @include button-variant($theme-btn-caution-color, $theme-btn-caution-bg, $theme-btn-caution-border);
+}
+
+.btn-num {
+  @include button-variant($theme-btn-numpad-color, $theme-btn-numpad-bg, $theme-btn-numpad-border);
+}
+
+
+// MAIN CONTENT
+body > .container {
+
+  .btn-group {
+    .btn {
+      @extend .btn-lg;
+      @extend .btn-block;
+      max-width: $button-large-block-width;
+    }
+  }
+
+  .btn-group-task {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+.panel-body > .btn-void {
+    height: $button-task-action-height;
+    width: $button-large-block-width;
+}
+
+// LEFT PANEL
+.container-task-area {
+
+  .btn-group-task {
+    bottom: $static-space;
+
+    .btn {
+      @extend .btn-lg;
+      @extend .btn-block;
+      clear: both;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $button-large-block-width;
+    }
+  }
+}
+
+// RIGHT PANEL
+.container-task-action {
+  @extend %grid-container;
+
+  .panel-body {
+
+    // GROUP OF BUTTONS DIRECTLY FOLLOWING .panel-body div
+    + .btn-group-task {
+      bottom: 0;
+
+      .btn {
+        @include border-radius(0);
+        height: $button-task-action-height;
+      }
+    }
+
+    // GROUP OF BUTTONS THAT ARE A DIRECT CHILD OF .panel-body div
+    > .btn-group-task {
+      bottom: 0;
+      position: absolute;
+
+      .btn {
+        @extend .btn-block;
+        @extend .btn-lg;
+        @include border-radius(0);
+
+        + .btn {
+          margin-top: 0;
+        }
+
+        &:first-child {
+          @include border-top-radius(4px);
+        }
+      }
+    }
+  }
+
+  .btn-pay,
+  .btn-function {
+    @extend %btn-half;
+  }
+}
+
+
+// Vertical button groups
+// ----------------------
+
+
+.btn-group-vertical {
+  width: $button-large-block-width;
+
+  .btn {
+    height: $button-task-action-height;
+  }
+}
+
+.numpad + .btn-group-vertical {
+  margin-top: 1px;
+
+  .btn:first-child {
+    @include border-top-radius(0);
+  }
+}
+
+
+// EXTEND BOOTSTRAP CLASSES
+.btn-search {
+  @extend .btn-lg;
+  @include btn-without-background;
+}
+
+.btn-admin {
+  @extend .btn-lg;
+  @include btn-without-background;
+}
+
+// COLORS
+// DEFAULT (gray)
+.btn-settings {
+  @extend .btn-default;
+}
+
+// PRIMARY (blue)
+.btn-function {
+  @extend .btn-primary;
+}
+.btn-adjust {
+  @extend .btn-primary;
+}
+.btn-auth {
+  @extend .btn-primary;
+}
+
+// SUCCESS (green)
+.btn-start-order {
+  @extend .btn-success;
+  @extend .btn-block;
+}
+.btn-pay {
+  @extend .btn-success;
+}
+.btn-add {
+  @extend .btn-success;
+}
+.btn-update {
+  @extend .btn-success;
+}
+.btn-next {
+  @extend .btn-success;
+}
+
+// DANGER (red)
+.btn-close {
+  @extend .btn-danger;
+}
+.btn-cancel {
+  @extend .btn-danger;
+}
+.btn-pending {
+  @extend .btn-danger;
+}
+.btn-back {
+  @extend .btn-danger;
+}
+
+
+// CAUTION (yellow)
+.btn-void {
+  @extend %btn-caution;
+}
+
+

@@ -1,0 +1,55 @@
+// SETUP
+@import "bootstrap";
+
+// Modules and Variables
+@import "partials/base";
+
+// Partials
+@import "partials/reset";
+@import "partials/grids";
+@import "partials/scaffolding";
+
+@import "partials/buttons";
+@import "partials/forms";
+@import "partials/numpad";
+@import "partials/modal";
+
+@import "partials/header";
+@import "partials/footer";
+
+@import "partials/dashboard";
+@import "partials/panel-task-area";
+@import "partials/panel-task-action";
+
+// Third-party
+@import "vendor/theme";
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(".../../fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: //url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
+       url("../../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"),
+       url("../../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"),
+       url("../../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// MEDIA QUERIES
+// ----------------------------------------------------------------------------------------------------
+@media (min-width: 992px) {
+  .container {
+    width: 1024px - ($static-space*2);
+  }
+
+  .navbar-fixed-top + .container > .row {
+    height: 624px;
+  }
+
+}
+
+
+
+

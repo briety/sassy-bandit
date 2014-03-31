@@ -1,0 +1,68 @@
+/* line 63, ../../vendor/theme.scss */
+body {
+  background: url("../../images/backgrounds/grey_wash_wall.png") #7f7f7f;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+/* line 74, ../../vendor/theme.scss */
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* line 80, ../../vendor/theme.scss */
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+/* line 90, ../../vendor/theme.scss */
+.navbar-fixed-top .navbar-brand {
+  color: white;
+}
+/* line 93, ../../vendor/theme.scss */
+.navbar-fixed-top .navbar-brand:hover {
+  color: #cccccc;
+}
+
+/* line 103, ../../vendor/theme.scss */
+.panel {
+  border-color: #181818;
+}
+/* line 106, ../../vendor/theme.scss */
+.panel .panel-heading {
+  background: #1f1f1f;
+  border-color: #181818;
+  color: white;
+}
+
+/* line 113, ../../vendor/theme.scss */
+.panel-body .label {
+  color: black;
+}
+
+/* line 125, ../../vendor/theme.scss */
+.order-list .order-product-row {
+  border-bottom: 1px solid black;
+}
+/* line 128, ../../vendor/theme.scss */
+.order-list .order-product-row:only-child {
+  border-bottom: none;
+}
+/* line 132, ../../vendor/theme.scss */
+.order-list .order-product-row:nth-child(odd) {
+  background: white;
+}
+/* line 136, ../../vendor/theme.scss */
+.order-list .order-product-row:nth-child(even) {
+  background: #bfbfbf;
+}
+
+/* line 149, ../../vendor/theme.scss */
+#body-dashboard .container-task-area .panel {
+  background: url("../../images/logos/conductiv-logo-full.png") no-repeat center 125px transparent;
+  background-size: 100%;
+  border: none;
+}

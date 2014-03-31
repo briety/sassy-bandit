@@ -1,0 +1,79 @@
+@import "base";
+
+// BACKDROP TO DE-EPHASISE ITEMS UNRELATED TO CURRENT ACTION
+.modal-backdrop {
+  opacity: $modal-backdrop-opacity;
+  z-index: 1020; // allow fixed header and footer bars to appear above the backdrop
+}
+
+
+// CONTAINERS
+.modal-fullscreen {
+  background: $modal-background-color;
+  bottom: 0;
+  left: 0;
+  outline: 0;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+
+  .container {
+    margin: 0 auto;
+    max-width: 700px;
+    width: (16/24)*100%;
+  }
+}
+
+
+// HEADINGS
+.modal-heading {
+  @include main-content-heading($vert-space auto);
+}
+
+.modal-subheading {
+  @include main-content-heading($vert-space auto);
+  max-width: 250px;
+}
+
+
+// COLUMNS
+.modal-content-groupA,
+.modal-content-groupB {
+  @extend %grid-12-of-24;
+}
+
+
+// BUTTONS
+.modal-fullscreen {
+
+  .container + .btn-group {
+    @include fix-to-bottom;
+
+    .btn {
+      @extend %grid-12-of-24;
+      @include border-radius(0);
+      height: $button-task-action-height;
+
+      &:only-child {
+        width: 100%;
+      }
+    }
+
+  }
+
+}
+
+// ITEMS TO APPEAR ABOVE MODAL BACKDROP
+.active-product {
+  position: relative;
+  z-index: 1050;
+}
+
+.btn-group-active {
+  z-index: 1050;
+}

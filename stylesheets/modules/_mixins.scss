@@ -1,0 +1,83 @@
+@import "variables";
+
+// FIXES
+@mixin micro-clear-fix {
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+@mixin float-fix {
+  min-height: 1px;
+  overflow: hidden;
+}
+
+
+
+// GENERAL SCAFFOLDING
+@mixin text-hide {
+  float: left;
+  text-indent: -9999px;
+}
+
+@mixin scrollable-list($height) {
+  height: $height;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@mixin inner-width-reduced($width: (10/24)*100%) {
+  margin: 0 auto;
+  width: $width;
+}
+
+@mixin panel-action-area-align-vert($height) {
+  display: table-cell; // needed for vertical-align property
+  height: $height; // height must be set due to display-cell property; percentages do not work
+  vertical-align: middle;
+  width: 659px; // width must be set due to display-cell property; percentages do not work
+}
+
+@mixin fix-to-bottom($bottom: 0, $left:0, $margin: 0 auto) {
+  bottom: $bottom;
+  position: absolute;
+  left: $left;
+  margin: $margin;
+  width: 100%;
+}
+
+// NAV BARS
+@mixin navbar-theme {
+  background: $theme-blue;
+  border-color: mix(#000, $theme-blue, 20%);
+}
+
+
+// HEADINGS
+@mixin main-content-heading($margin: 0 auto $vert-space) {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin: $margin;
+}
+
+@mixin panel-heading-bg($background-color:$panel-inverse-heading-bg, $text-color:$panel-inverse-heading-color, $border-color:$panel-inverse-heading-border) {
+  background: $background-color;
+  border-color: $border-color;
+  color: $text-color;
+}
+
+// BUTTONS
+@mixin btn-without-background($color: #fff) {
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+
+}

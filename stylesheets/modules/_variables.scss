@@ -1,0 +1,89 @@
+// COLORS
+$theme-black:   black;
+$theme-white:   white;
+
+$theme-gray-darkest:  #1f1f1f;
+$theme-gray-darker:   #3f3f3f;
+$theme-gray-dark:     #5f5f5f;
+$theme-gray:          #7f7f7f;
+$theme-gray-light:    #9f9f9f;
+$theme-gray-lighter:  #bfbfbf;
+$theme-gray-lightest: #dfdfdf;
+
+$theme-red:     red;
+$theme-blue:    #123048;
+$theme-green:   green;
+$theme-orange:  #FF5F2F;
+$theme-yellow:  #FCC168;
+$theme-purple:  purple;
+
+$theme-caution: $theme-yellow;
+
+
+// BUTTON and PANELS COLORS
+$theme-btn-caution-color:              #fff !default;
+$theme-btn-caution-bg:                 $theme-caution !default;
+$theme-btn-caution-border:             darken($theme-caution, 5%) !default;
+
+$theme-btn-numpad-color:              #fff !default;
+$theme-btn-numpad-bg:                 $theme-gray-darkest !default;
+$theme-btn-numpad-border:             lighten($theme-gray-darkest, 10%) !default;
+
+
+// BACKGROUNDS
+$modal-background-color: $theme-white;
+
+
+// TYPE
+$text-color-dark:   $theme-black;
+$text-color-light:  $theme-white;
+
+$text-color-header: $theme-white;
+$text-color-header-hover: mix(#000, $text-color-header, 20%);
+$text-color-footer: $theme-white;
+
+
+// PANELS
+$panel-inverse-heading-bg: $theme-gray-darkest;
+$panel-inverse-heading-color: $text-color-light;
+$panel-inverse-heading-border: mix(#000, $theme-gray-darkest, 20%);
+
+
+// SPACING
+$horiz-space: 2.5%;
+$horiz-space-small: $horiz-space/2;
+$horiz-space-large: $horiz-space*2;
+
+$vert-space: 1em;
+$vert-space-x-small: $vert-space/4;
+$vert-space-small: $vert-space/2;
+$vert-space-large: $vert-space*2;
+
+$static-space: 16px;
+$static-space-x-small: $static-space/4;
+$static-space-small: $static-space/2;
+$static-space-large: $static-space*2;
+
+
+$input-box-padding: $vert-space-small $horiz-space;
+
+
+// SIZING
+// Height
+$button-task-action-height: 58px;
+
+$input-select-height: 38px;
+
+
+// Width
+$button-large-block-width: 261px; // button width needs to match the width of elements in .inner
+
+
+// OPACITY
+$disabled-item-opacity: .3;
+$modal-backdrop-opacity: .75;
+
+
+
+// IMAGES
+$input-select-dropdown-arrow: url("../../images/icons/sprite-caret.png");

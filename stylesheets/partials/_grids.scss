@@ -1,0 +1,128 @@
+@import "../modules/variables";
+
+// Set the desired number of columns in a variable for flexibility
+
+$total-columns: 24;
+
+// Create a placeholder for the grid container
+
+%grid-container {
+  width:100%;
+  max-width:1024px - ($static-space*2); // adjust to your needs
+  margin:0 auto $static-space; // bit of margin bottom for vertical rythm
+}
+
+// Create a placeholder for styles common to all columns
+
+%grid {
+  float:left;
+  margin:0;
+  padding:0 0 0 $static-space; // 2% flexible gutters thanks to box-sizing:border-box
+
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+// Loop through all the columns and generate the correct width
+// use @extend to pull in common styles
+
+@for $i from 1 through $total-columns {
+  %grid-#{$i}-of-#{$total-columns} {
+    @extend %grid;
+    width: ($i / $total-columns) * 100%;
+  }
+}
+
+
+
+// Make use of the placeholders with meaningful class names
+.container-default {
+  @extend %grid-container;
+
+  .container-task-area {
+    @extend %grid-16-of-24; // 2/3 of page
+  }
+  .container-task-action {
+    @extend %grid-8-of-24; // 1/3 of page
+  }
+}
+
+
+// GLOBAL HEADER
+.navbar-header {
+  @extend %grid-container;
+
+  .col-left,
+  .col-right {
+    @extend %grid-12-of-24; // 1/2 of page
+  }
+}
+
+
+// GLOBAL FOOTER
+.navbar-footer {
+  @extend %grid-container;
+
+  .col-left,
+  .col-center,
+  .col-right {
+    @extend %grid-8-of-24; // 1/3 of page
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+
+// Category and Product Grid
+.category-list,
+.product-list {
+  .col {
+    @extend %grid-6-of-24; // 1/4 of panel
+  }
+}
+
+.category-list,
+.product-list {
+  margin: 20px 0 0;
+
+  .row {
+    margin: 0;
+  }
+
+  .row:last-child .col { // supported in all major browsers. Not supported in IE8 and earlier versions.
+    border-bottom-width: 1px;
+  }
+
+  .col {
+    @extend %grid-6-of-24; // 1/4 of page
+    border-style: solid;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    display: table;
+    height: 58px;
+    text-align: center;
+
+    &:last-child {
+      border-right-width: 1px;
+    }
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+
+form .payment-amount {
+  .input-label,
+  input {
+    @extend %grid-12-of-24;
+    padding: $vert-space-small $horiz-space;
+  }
+}
+

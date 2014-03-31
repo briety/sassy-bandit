@@ -1,0 +1,137 @@
+@import "base";
+
+
+.container-task-action {
+  .panel-body {
+    padding: 0;
+  }
+}
+
+
+// GLOBAL
+[class^="product-adjustment"] {
+  @include float-fix;
+
+  span {
+    @extend .label;
+  }
+
+  .label {
+    text-align: left;
+  }
+
+  .value {
+    float: right;
+  }
+
+}
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// DASHBOARD
+// ----------------------------------------------------------------------------------------------------
+.btn-start-order {
+  @extend .btn-lg;
+  @include border-radius(1px);
+  position: absolute;
+  bottom: 0;
+}
+
+.order-body {
+  padding-bottom: 81px;
+}
+
+
+
+// CURRENT ORDER
+
+// ORDER SUMMARY
+[class*="summary-body"] {
+
+  .order-list {
+    @include scrollable-list(314px);
+
+    + dl {
+      border-top: 1px solid $theme-gray-lightest;
+      box-shadow: 0 0 8px $theme-gray-lightest; // needs mixin
+      margin-top: 4px;
+      padding-top: $static-space;
+    }
+  }
+
+  dl {
+    bottom: $button-task-action-height;
+    padding-bottom: $static-space;
+    position: absolute;
+    width: 100%;
+  }
+
+  dt {
+    padding-left: $static-space-small;
+  }
+
+  dd {
+    padding-right: $static-space-small;
+  }
+
+  .order-summary-balance,
+  .order-summary-balance + dd {
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+} // end .order-summary-body
+
+
+
+// INDIVIDUAL PRODUCT IN ORDER SUMMARY
+.order-product-row {
+
+  li {
+    font-size: 14px;
+
+
+    &:nth-child(-n+4) {
+      @extend %grid-12-of-24;
+    }
+
+    &:nth-child(-n+4) {
+      @extend %grid-12-of-24;
+
+      &:nth-child(odd) {
+        clear: left;
+        padding-left: 0;
+      }
+
+      &:nth-child(even) {
+        text-align: right;
+      }
+    }
+
+    &:nth-child(n+5) {
+      clear: left;
+    }
+  }
+  h3,
+  h4 {
+    font-weight: bold;
+  }
+
+  .product-total {
+    h4 {
+      display: inline-block;
+    }
+    span {
+      margin-left: $horiz-space-small;
+    }
+  }
+}
+
+.order-list {
+  .order-product-row {
+    li {
+      margin: 5px 0; // override grid styles, needed another selector to override
+    }
+  }
+}

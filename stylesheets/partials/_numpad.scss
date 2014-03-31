@@ -1,0 +1,62 @@
+@import "base";
+
+.numpad {
+  clear: both;
+  //margin: 20px 0;
+  overflow: hidden;
+}
+
+
+.btn-num {
+  @extend %grid-8-of-24;
+  @include border-radius(0);
+
+  display: block;
+  float: left;
+  line-height: 50px;
+
+  &:nth-child(3n+1) {
+    clear: left;
+  }
+
+  &:nth-child(1) {
+    @include border-top-left-radius(6px);
+  }
+
+  &:nth-child(3) {
+    @include border-top-right-radius(6px);
+  }
+
+  &:hover {
+    border-color: $theme-btn-numpad-border;
+  }
+}
+
+
+// For use when the number input div isn't directly followed by action buttons
+.numpad-stand-alone {
+  @extend .numpad;
+
+  button {
+    &:nth-child(10) {
+      @include border-bottom-left-radius(4px);
+    }
+
+    &:nth-child(12) {
+      @include border-bottom-right-radius(4px);
+    }
+
+  }
+
+}
+
+
+.numpad-input-group {
+  @include border-radius(6px);
+  background: $theme-gray-lightest;
+  border: 1px solid $theme-gray-lighter;
+  padding: $static-space;
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,.15);
+  box-shadow: 0 1px 5px rgba(0,0,0,.15);
+}

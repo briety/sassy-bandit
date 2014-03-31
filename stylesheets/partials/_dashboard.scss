@@ -1,0 +1,25 @@
+@import "base";
+
+
+#body-dashboard {
+
+  .container-task-area .panel-heading {
+    display: none;
+  }
+
+}
+
+// Online/Offline View
+.order-que {
+  button,
+  p {
+    float: left;
+  }
+  button {
+    clear: left;
+  }
+  p {
+    line-height: 33px; // match button height
+    margin-left: $static-space-small;
+  }
+}

@@ -1,0 +1,122 @@
+@import "base";
+
+.validation-error {
+  display: none;
+}
+
+
+.select-feature {
+
+  > div {
+    margin: 0 0 $static-space-small;
+    overflow: hidden;
+  }
+
+  label,
+  .container-select-menu {
+    @extend %grid-12-of-24;
+  }
+}
+
+
+form {
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  label {
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    .input-label {
+      @extend %grid-8-of-24;
+      //line-height: 38px; // match outputted style of box input fields
+    }
+  }
+
+  .input-label {
+    display: block;
+    padding: $vert-space-small 0;
+    text-align: left;
+  }
+}
+
+label {
+  @include float-fix;
+  display: block;
+  padding: $vert-space-small 0;
+
+  &.select-label {
+    line-height: $input-select-height;
+  }
+}
+
+.input-label {
+  line-height: $input-select-height;
+}
+
+textarea {
+  padding: $vert-space-small $horiz-space;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.input-text-faux {
+  @extend %grid-16-of-24;
+  padding: $input-box-padding;
+  text-align: right;
+}
+
+input[type="radio"] {
+  float: left;
+  margin: $vert-space-small $horiz-space $vert-space-small 2px;
+}
+
+select {
+  @include linear-gradient(top, rgb(255,255,255) 0%, rgb(204,204,204) 100%);
+  border:1px solid rgb(209,209,209);
+  display: block;
+  height: $input-select-height;
+  //padding: 5px 0;
+  padding: $vert-space-small $horiz-space-large;
+  -webkit-appearance: none;
+
+  + .dropdown-arrow {
+    background: $input-select-dropdown-arrow no-repeat 0 50%;
+    background-size: 75%;
+    height: $input-select-height;
+    left: 88%;
+    position: absolute;
+    top: 0;
+    width: 16px;
+  }
+}
+
+
+.form-auth {
+
+  .input-label {
+    display: none;
+  }
+
+  input {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.container-select-menu {
+  position: relative;
+
+  select {
+    //padding: $vert-space-small $horiz-space-large;
+    width: 100%;
+  }
+
+
+}

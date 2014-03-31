@@ -1,0 +1,151 @@
+@import "base";
+
+// ----------------------------------------------------------------------------------------------------
+// GLOBAL GENERAL STYLES
+// ----------------------------------------------------------------------------------------------------
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+[class*="-placeholder"] {
+  @include float-fix;
+}
+
+
+// ----------------------------------------------------------------------------------------------------
+// GLOBAL HEADINGS
+// ----------------------------------------------------------------------------------------------------
+.panel-body {
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  .panel-heading {
+    margin: 0  0 $vert-space-small;
+    padding: 0;
+  }
+}
+
+.panel-body-heading {
+  @include main-content-heading;
+}
+
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// GLOBAL LISTS (ul, ol, dl)
+// ----------------------------------------------------------------------------------------------------
+dl {
+  line-height: 1.5em;
+  overflow: hidden;
+}
+
+dt, dd {
+  float: left;
+}
+
+dt {
+  @extend %grid-16-of-24;
+  clear: left;
+  font-weight: normal;
+  padding-left: 0;
+  text-align: left;
+
+  + dd {
+    @extend %grid-8-of-24;
+    text-align: right;
+  }
+
+  &.disabled,
+  &.disabled + dd {
+    opacity: $disabled-item-opacity;
+  }
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// GLOBAL CONTAINERS
+// ----------------------------------------------------------------------------------------------------
+.container {
+  padding: 0;
+
+  .row {
+    [class*="container-task-"],
+    .panel {
+      height: 100%;
+    }
+  }
+}
+
+.container-default {
+  margin: 0 auto 20px;
+}
+
+.inner {
+  // div that has a smaller width then available space and is vertically centered. Appears inside .panel-body-auth
+  @include inner-width-reduced;
+  margin: 0 auto;
+
+  p,
+  [class*="heading"] {
+    text-align: center;
+  }
+
+  p {
+    margin: $vert-space-small 0;
+  }
+
+}
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// GLOBAL COLUMNS AND ROWS
+// ----------------------------------------------------------------------------------------------------
+.col-left {
+  text-align: left;
+}
+
+.col-center {
+  text-align: center;
+}
+
+.col-right {
+  text-align: right;
+
+  > .btn-group {
+    float: right;
+  }
+}
+
+.row {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0;
+}
+
+
+
+// ----------------------------------------------------------------------------------------------------
+// GLOBAL PANELS
+// ----------------------------------------------------------------------------------------------------
+.panel {
+  @extend .panel-default;
+  //overflow: hidden;
+  position: relative;
+
+  .panel-body-with-list {
+    height: 100%;
+    overflow-y: scroll;
+    padding: 0;
+
+    [class*="-row"] {
+      padding: 8px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import "base";
+
+.navbar-fixed-top {
+  //@extend .navbar-inverse;
+  @include navbar-theme;
+  @include box-shadow(0 2px 4px rgba(0,0,0,.25));
+
+  .navbar-header {
+    .col-left,
+    .col-right {
+      padding: 0;
+    }
+  }
+
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+// GLOBAL HEADER
+.navbar-header {
+  margin: 0 !important;
+  position: relative;
+
+  .btn-group:last-child {
+      margin-right: -16px;
+  }
+
+  .btn {
+    @extend .btn-lg;
+    @include btn-without-background;
+    background: transparent;
+
+    &:hover {
+      color: $text-color-header-hover;
+    }
+
+    .glyphicon {
+      font-size: 24px;
+    }
+  }
+
+  .error-message {
+    color: $theme-white;
+    display: none;
+    height: 51px;
+    line-height: 51px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+
+    span {
+
+      font-size: 18px;
+      height: 50px;
+      line-height: 20px;
+
+      margin: 0 auto;
+    }
+
+    &.visible {
+      display: block;
+
+      ~ * {
+        display: none;
+      }
+    }
+  }
+
+}
