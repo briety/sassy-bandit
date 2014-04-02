@@ -26,7 +26,7 @@
 .item-input {
   // one of two columns; used in screens where the number pad is displayed on the right side of .panel-body
   [class*="item-"] {
-    @include float-fix;
+    @include overflow-fix;
     margin: 20px 0;
 
     &:first-child {

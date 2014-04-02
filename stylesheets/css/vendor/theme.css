@@ -1,6 +1,9 @@
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 63, ../../vendor/theme.scss */
 body {
-  background: url("../../images/backgrounds/grey_wash_wall.png") #7f7f7f;
+  background: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 70px;
   padding-bottom: 30px;
@@ -33,34 +36,34 @@ body {
 }
 /* line 106, ../../vendor/theme.scss */
 .panel .panel-heading {
-  background: #1f1f1f;
-  border-color: #181818;
-  color: white;
+  background: white;
+  border-color: #cccccc;
+  color: black;
 }
 
-/* line 113, ../../vendor/theme.scss */
+/* line 114, ../../vendor/theme.scss */
 .panel-body .label {
   color: black;
 }
 
-/* line 125, ../../vendor/theme.scss */
+/* line 126, ../../vendor/theme.scss */
 .order-list .order-product-row {
   border-bottom: 1px solid black;
 }
-/* line 128, ../../vendor/theme.scss */
+/* line 129, ../../vendor/theme.scss */
 .order-list .order-product-row:only-child {
   border-bottom: none;
 }
-/* line 132, ../../vendor/theme.scss */
+/* line 133, ../../vendor/theme.scss */
 .order-list .order-product-row:nth-child(odd) {
   background: white;
 }
-/* line 136, ../../vendor/theme.scss */
+/* line 137, ../../vendor/theme.scss */
 .order-list .order-product-row:nth-child(even) {
   background: #bfbfbf;
 }
 
-/* line 149, ../../vendor/theme.scss */
+/* line 150, ../../vendor/theme.scss */
 #body-dashboard .container-task-area .panel {
   background: url("../../images/logos/conductiv-logo-full.png") no-repeat center 125px transparent;
   background-size: 100%;

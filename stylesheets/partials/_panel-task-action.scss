@@ -1,16 +1,10 @@
 @import "base";
 
 
-.container-task-action {
-  .panel-body {
-    padding: 0;
-  }
-}
-
 
 // GLOBAL
 [class^="product-adjustment"] {
-  @include float-fix;
+  @include overflow-fix;
 
   span {
     @extend .label;

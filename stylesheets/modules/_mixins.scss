@@ -1,6 +1,9 @@
 @import "variables";
 
-// FIXES
+
+// ----------------------------------------------------------------------------------------------------
+// CLEAR FLOATS
+// ----------------------------------------------------------------------------------------------------
 @mixin micro-clear-fix {
   &:before,
   &:after {
@@ -12,14 +15,25 @@
   }
 }
 
-@mixin float-fix {
+@mixin clear-fix {
+  &:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin overflow-fix {
   min-height: 1px;
   overflow: hidden;
 }
 
 
-
+// ----------------------------------------------------------------------------------------------------
 // GENERAL SCAFFOLDING
+// ----------------------------------------------------------------------------------------------------
 @mixin text-hide {
   float: left;
   text-indent: -9999px;
@@ -51,14 +65,42 @@
   width: 100%;
 }
 
-// NAV BARS
-@mixin navbar-theme {
-  background: $theme-blue;
-  border-color: mix(#000, $theme-blue, 20%);
+
+// ----------------------------------------------------------------------------------------------------
+// VERTICAL ALIGN MIDDLE
+// ----------------------------------------------------------------------------------------------------
+@mixin vert-center-element($spacing: -.35em, $outer-height: 100%, $inner-width: 100%){
+  text-align: center;
+
+// ghost element; shifts element to center, -.25em works in the browser but not on iPad
+  &:before {
+    content: '';
+    display: inline-block;
+    height: $outer-height;
+    vertical-align: middle;
+    margin-right: $spacing;
+  }
+
+// The element to be centered, can be of any width and height
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+    width: $inner-width;
+  }
 }
 
 
-// HEADINGS
+// ----------------------------------------------------------------------------------------------------
+// HIERARCICAL ELEMENTS
+// ----------------------------------------------------------------------------------------------------
+/* Nav Bars ----------- */
+@mixin navbar-theme($bg-color: $theme-green-dark, $txt-color: $text-color-light) {
+  background: $bg-color;
+  border-color: mix(#000, $bg-color, 20%);
+  color: $txt-color;
+}
+
+/* Headings ----------- */
 @mixin main-content-heading($margin: 0 auto $vert-space) {
   font-size: 22px;
   font-weight: bold;
@@ -72,7 +114,8 @@
   color: $text-color;
 }
 
-// BUTTONS
+
+/* Buttons ----------- */
 @mixin btn-without-background($color: #fff) {
   color: #fff;
 

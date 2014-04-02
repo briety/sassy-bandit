@@ -26,7 +26,7 @@ $ven-theme-purple:  purple;
 
 $ven-theme-caution: $theme-yellow;
 
-$ven-theme-background-main: $theme-gray;
+$ven-theme-background-main: $theme-white;
 $ven-theme-background-secondary: $theme-gray-lighter;
 
 
@@ -61,7 +61,7 @@ $panel-border: $panel-inverse-heading-border;
 // BODY and HTML
 // ----------------------------------------------------------------------------------------------------
 body {
-  background: url('../../images/backgrounds/grey_wash_wall.png') $ven-theme-background-main;
+  background: $ven-theme-background-main;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 70px;
   padding-bottom: 30px;
@@ -104,10 +104,11 @@ body {
   border-color: $panel-border;
 
   .panel-heading {
-    @include panel-heading-bg();
+    @include navbar-theme($ven-theme-background-main, $ven-theme-black);
   }
-
 }
+
+
 
 .panel-body {
   .label {

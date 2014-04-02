@@ -1,4 +1,4 @@
-/* normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /* line 9, ../bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -7640,6 +7640,9 @@ td.visible-print {
     display: none !important;
   }
 }
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -7836,6 +7839,9 @@ form .payment-amount input {
   padding: 0.5em 2.5%;
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 7, ../partials/_scaffolding.scss */
 ::-webkit-scrollbar {
   width: 0;
@@ -7847,17 +7853,17 @@ form .payment-amount input {
   overflow: hidden;
 }
 
-/* line 20, ../partials/_scaffolding.scss */
+/* line 22, ../partials/_scaffolding.scss */
 .panel-body > *:first-child {
   margin-top: 0;
 }
-/* line 24, ../partials/_scaffolding.scss */
+/* line 26, ../partials/_scaffolding.scss */
 .panel-body .panel-heading {
   margin: 0 0 0.5em;
   padding: 0;
 }
 
-/* line 30, ../partials/_scaffolding.scss */
+/* line 32, ../partials/_scaffolding.scss */
 .panel-body-heading {
   font-size: 22px;
   font-weight: bold;
@@ -7865,122 +7871,142 @@ form .payment-amount input {
   margin: 0 auto 1em;
 }
 
-/* line 41, ../partials/_scaffolding.scss */
+/* line 43, ../partials/_scaffolding.scss */
 dl {
   line-height: 1.5em;
   overflow: hidden;
 }
 
-/* line 46, ../partials/_scaffolding.scss */
+/* line 48, ../partials/_scaffolding.scss */
 dt, dd {
   float: left;
 }
 
-/* line 50, ../partials/_scaffolding.scss */
+/* line 52, ../partials/_scaffolding.scss */
 dt {
   clear: left;
   font-weight: normal;
   padding-left: 0;
   text-align: left;
 }
-/* line 57, ../partials/_scaffolding.scss */
+/* line 59, ../partials/_scaffolding.scss */
 dt + dd {
   text-align: right;
 }
-/* line 63, ../partials/_scaffolding.scss */
+/* line 65, ../partials/_scaffolding.scss */
 dt.disabled, dt.disabled + dd {
   opacity: 0.3;
 }
 
+/* line 71, ../partials/_scaffolding.scss */
+p {
+  margin: 1em 0;
+}
 /* line 74, ../partials/_scaffolding.scss */
+p:first-child {
+  margin-top: 0;
+}
+
+/* line 79, ../partials/_scaffolding.scss */
+a {
+  text-decoration: underline;
+}
+/* line 82, ../partials/_scaffolding.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 92, ../partials/_scaffolding.scss */
 .container {
   padding: 0;
 }
-/* line 79, ../partials/_scaffolding.scss */
+/* line 97, ../partials/_scaffolding.scss */
 .container .row [class*="container-task-"],
 .container .row .panel {
   height: 100%;
 }
 
-/* line 85, ../partials/_scaffolding.scss */
+/* line 103, ../partials/_scaffolding.scss */
 .container-default {
   margin: 0 auto 20px;
 }
 
-/* line 89, ../partials/_scaffolding.scss */
+/* line 107, ../partials/_scaffolding.scss */
 .inner {
   margin: 0 auto;
   width: 41.66667%;
   margin: 0 auto;
 }
-/* line 95, ../partials/_scaffolding.scss */
+/* line 113, ../partials/_scaffolding.scss */
 .inner p,
 .inner [class*="heading"] {
   text-align: center;
 }
-/* line 99, ../partials/_scaffolding.scss */
+/* line 117, ../partials/_scaffolding.scss */
 .inner p {
   margin: 0.5em 0;
 }
 
-/* line 110, ../partials/_scaffolding.scss */
+/* line 128, ../partials/_scaffolding.scss */
 .col-left {
   text-align: left;
 }
 
-/* line 114, ../partials/_scaffolding.scss */
+/* line 132, ../partials/_scaffolding.scss */
 .col-center {
   text-align: center;
 }
 
-/* line 118, ../partials/_scaffolding.scss */
+/* line 136, ../partials/_scaffolding.scss */
 .col-right {
   text-align: right;
 }
-/* line 121, ../partials/_scaffolding.scss */
+/* line 139, ../partials/_scaffolding.scss */
 .col-right > .btn-group {
   float: right;
 }
 
-/* line 126, ../partials/_scaffolding.scss */
+/* line 144, ../partials/_scaffolding.scss */
 .row {
   width: 100%;
   max-width: 1024px;
   margin: 0;
 }
 
-/* line 137, ../partials/_scaffolding.scss */
+/* line 155, ../partials/_scaffolding.scss */
 .panel {
   position: relative;
 }
-/* line 142, ../partials/_scaffolding.scss */
+/* line 159, ../partials/_scaffolding.scss */
 .panel .panel-body-with-list {
   height: 100%;
   overflow-y: scroll;
-  padding: 0;
 }
-/* line 147, ../partials/_scaffolding.scss */
+/* line 163, ../partials/_scaffolding.scss */
 .panel .panel-body-with-list [class*="-row"] {
   padding: 8px;
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 9, ../partials/_buttons.scss */
 .btn-void {
   color: white;
-  background-color: #fcc168;
-  border-color: #fcb74f;
+  background-color: yellow;
+  border-color: #e5e600;
 }
 /* line 510, ../bootstrap/_mixins.scss */
 .btn-void:hover, .btn-void:focus, .btn-void:active, .active.btn-void {
   color: white;
-  background-color: #fbb140;
-  border-color: #fa9e13;
+  background-color: #d6d600;
+  border-color: #a8a800;
 }
 /* line 515, ../bootstrap/_mixins.scss */
 .open .dropdown-toggle.btn-void {
   color: white;
-  background-color: #fbb140;
-  border-color: #fa9e13;
+  background-color: #d6d600;
+  border-color: #a8a800;
 }
 /* line 521, ../bootstrap/_mixins.scss */
 .btn-void:active, .active.btn-void {
@@ -7992,12 +8018,12 @@ dt.disabled, dt.disabled + dd {
 }
 /* line 534, ../bootstrap/_mixins.scss */
 .disabled.btn-void, .disabled.btn-void:hover, .disabled.btn-void:focus, .disabled.btn-void:active, .disabled.active.btn-void, [disabled].btn-void, [disabled].btn-void:hover, [disabled].btn-void:focus, [disabled].btn-void:active, [disabled].active.btn-void, fieldset[disabled] .btn-void, fieldset[disabled] .btn-void:hover, fieldset[disabled] .btn-void:focus, fieldset[disabled] .btn-void:active, fieldset[disabled] .active.btn-void {
-  background-color: #fcc168;
-  border-color: #fcb74f;
+  background-color: yellow;
+  border-color: #e5e600;
 }
 /* line 540, ../bootstrap/_mixins.scss */
 .btn-void .badge {
-  color: #fcc168;
+  color: yellow;
   background-color: white;
 }
 
@@ -8134,7 +8160,7 @@ body > .container .btn-group-task {
 .btn-search {
   color: #fff;
 }
-/* line 79, ../modules/_mixins.scss */
+/* line 122, ../modules/_mixins.scss */
 .btn-search:hover {
   color: #fff;
 }
@@ -8143,11 +8169,14 @@ body > .container .btn-group-task {
 .btn-admin {
   color: #fff;
 }
-/* line 79, ../modules/_mixins.scss */
+/* line 122, ../modules/_mixins.scss */
 .btn-admin:hover {
   color: #fff;
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 3, ../partials/_forms.scss */
 .validation-error {
   display: none;
@@ -8254,6 +8283,9 @@ select + .dropdown-arrow {
   width: 100%;
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 3, ../partials/_numpad.scss */
 .numpad, .numpad-stand-alone {
   clear: both;
@@ -8320,6 +8352,9 @@ select + .dropdown-arrow {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 4, ../partials/_modal.scss */
 .modal-backdrop {
   opacity: 0.75;
@@ -8398,23 +8433,28 @@ select + .dropdown-arrow {
   z-index: 1050;
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 3, ../partials/_header.scss */
 .navbar-fixed-top {
-  background: #123048;
-  border-color: #0e2639;
+  background: #2f390f;
+  border-color: #252d0c;
+  color: white;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
-/* line 10, ../partials/_header.scss */
+/* line 9, ../partials/_header.scss */
 .navbar-fixed-top .navbar-header .col-left,
 .navbar-fixed-top .navbar-header .col-right {
   padding: 0;
 }
-/* line 15, ../partials/_header.scss */
+/* line 14, ../partials/_header.scss */
 .navbar-fixed-top .navbar-brand {
   font-size: 1.5em;
   font-weight: bold;
+  text-decoration: none;
 }
 
 /* line 22, ../partials/_header.scss */
@@ -8431,7 +8471,7 @@ select + .dropdown-arrow {
   color: #fff;
   background: transparent;
 }
-/* line 79, ../modules/_mixins.scss */
+/* line 122, ../modules/_mixins.scss */
 .navbar-header .btn:hover {
   color: #fff;
 }
@@ -8443,51 +8483,39 @@ select + .dropdown-arrow {
 .navbar-header .btn .glyphicon {
   font-size: 24px;
 }
-/* line 44, ../partials/_header.scss */
-.navbar-header .error-message {
+/* line 45, ../partials/_header.scss */
+.navbar-header .col-right a {
   color: white;
-  display: none;
-  height: 51px;
-  line-height: 51px;
-  position: absolute;
-  top: 0;
-  text-align: center;
-  width: 100%;
-}
-/* line 54, ../partials/_header.scss */
-.navbar-header .error-message span {
-  font-size: 18px;
-  height: 50px;
-  line-height: 20px;
-  margin: 0 auto;
-}
-/* line 63, ../partials/_header.scss */
-.navbar-header .error-message.visible {
-  display: block;
-}
-/* line 66, ../partials/_header.scss */
-.navbar-header .error-message.visible ~ * {
-  display: none;
+  line-height: 50px;
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 5, ../partials/_footer.scss */
-.navbar-fixed-bottom {
-  background: #123048;
-  border-color: #0e2639;
+.navbar-footer-wrap {
+  background: #2f390f;
+  border-color: #252d0c;
+  color: white;
   -webkit-box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
 }
 
-/* line 10, ../partials/_footer.scss */
+/* line 11, ../partials/_footer.scss */
 .navbar-footer {
   color: white;
 }
-/* line 13, ../partials/_footer.scss */
+/* line 14, ../partials/_footer.scss */
 .navbar-footer .col-center {
   min-height: 1px;
 }
-/* line 18, ../partials/_footer.scss */
+/* line 19, ../partials/_footer.scss */
 .navbar-footer .col-center span,
 .navbar-footer div > a {
   color: white;
@@ -8497,26 +8525,22 @@ select + .dropdown-arrow {
   line-height: 20px;
   height: 20px;
 }
-/* line 27, ../partials/_footer.scss */
-.navbar-footer a:hover {
-  text-decoration: none;
-}
-/* line 31, ../partials/_footer.scss */
+/* line 28, ../partials/_footer.scss */
 .navbar-footer .caret {
   border-top: 0;
   border-bottom: 4px solid;
 }
-/* line 36, ../partials/_footer.scss */
+/* line 33, ../partials/_footer.scss */
 .navbar-footer .btn {
   margin: 10px 0;
 }
-/* line 40, ../partials/_footer.scss */
+/* line 37, ../partials/_footer.scss */
 .navbar-footer .dropdown-menu {
   bottom: 90%;
   left: auto;
   top: auto;
 }
-/* line 49, ../partials/_footer.scss */
+/* line 46, ../partials/_footer.scss */
 .navbar-footer .dropdown-menu:after, .navbar-footer .dropdown-menu:before {
   top: 100%;
   left: 25%;
@@ -8527,14 +8551,14 @@ select + .dropdown-arrow {
   position: absolute;
   pointer-events: none;
 }
-/* line 60, ../partials/_footer.scss */
+/* line 57, ../partials/_footer.scss */
 .navbar-footer .dropdown-menu:after {
   border-color: rgba(136, 183, 213, 0);
   border-top-color: #fff;
   border-width: 5px;
   margin-left: -5px;
 }
-/* line 67, ../partials/_footer.scss */
+/* line 64, ../partials/_footer.scss */
 .navbar-footer .dropdown-menu:before {
   border-color: rgba(194, 225, 245, 0);
   border-top-color: #ccc;
@@ -8542,6 +8566,9 @@ select + .dropdown-arrow {
   margin-left: -6px;
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 6, ../partials/_dashboard.scss */
 #body-dashboard .container-task-area .panel-heading {
   display: none;
@@ -8562,6 +8589,9 @@ select + .dropdown-arrow {
   margin-left: 8px;
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 4, ../partials/_panel-task-area.scss */
 .container-task-area .panel-body {
   padding: 16px;
@@ -8609,26 +8639,24 @@ select + .dropdown-arrow {
   margin: 1em 0;
 }
 
-/* line 5, ../partials/_panel-task-action.scss */
-.container-task-action .panel-body {
-  padding: 0;
-}
-
-/* line 12, ../partials/_panel-task-action.scss */
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
+/* line 6, ../partials/_panel-task-action.scss */
 [class^="product-adjustment"] {
   min-height: 1px;
   overflow: hidden;
 }
-/* line 19, ../partials/_panel-task-action.scss */
+/* line 13, ../partials/_panel-task-action.scss */
 [class^="product-adjustment"] .label, [class^="product-adjustment"] span {
   text-align: left;
 }
-/* line 23, ../partials/_panel-task-action.scss */
+/* line 17, ../partials/_panel-task-action.scss */
 [class^="product-adjustment"] .value {
   float: right;
 }
 
-/* line 34, ../partials/_panel-task-action.scss */
+/* line 28, ../partials/_panel-task-action.scss */
 .btn-start-order {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -8639,40 +8667,40 @@ select + .dropdown-arrow {
   bottom: 0;
 }
 
-/* line 41, ../partials/_panel-task-action.scss */
+/* line 35, ../partials/_panel-task-action.scss */
 .order-body {
   padding-bottom: 81px;
 }
 
-/* line 52, ../partials/_panel-task-action.scss */
+/* line 46, ../partials/_panel-task-action.scss */
 [class*="summary-body"] .order-list {
   height: 314px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
-/* line 55, ../partials/_panel-task-action.scss */
+/* line 49, ../partials/_panel-task-action.scss */
 [class*="summary-body"] .order-list + dl {
   border-top: 1px solid #dfdfdf;
   box-shadow: 0 0 8px #dfdfdf;
   margin-top: 4px;
   padding-top: 16px;
 }
-/* line 63, ../partials/_panel-task-action.scss */
+/* line 57, ../partials/_panel-task-action.scss */
 [class*="summary-body"] dl {
   bottom: 58px;
   padding-bottom: 16px;
   position: absolute;
   width: 100%;
 }
-/* line 70, ../partials/_panel-task-action.scss */
+/* line 64, ../partials/_panel-task-action.scss */
 [class*="summary-body"] dt {
   padding-left: 8px;
 }
-/* line 74, ../partials/_panel-task-action.scss */
+/* line 68, ../partials/_panel-task-action.scss */
 [class*="summary-body"] dd {
   padding-right: 8px;
 }
-/* line 79, ../partials/_panel-task-action.scss */
+/* line 73, ../partials/_panel-task-action.scss */
 [class*="summary-body"] .order-summary-balance,
 [class*="summary-body"] .order-summary-balance + dd {
   font-weight: bold;
@@ -8680,45 +8708,48 @@ select + .dropdown-arrow {
   line-height: 1.5em;
 }
 
-/* line 91, ../partials/_panel-task-action.scss */
+/* line 85, ../partials/_panel-task-action.scss */
 .order-product-row li {
   font-size: 14px;
 }
-/* line 102, ../partials/_panel-task-action.scss */
+/* line 96, ../partials/_panel-task-action.scss */
 .order-product-row li:nth-child(-n+4):nth-child(odd) {
   clear: left;
   padding-left: 0;
 }
-/* line 107, ../partials/_panel-task-action.scss */
+/* line 101, ../partials/_panel-task-action.scss */
 .order-product-row li:nth-child(-n+4):nth-child(even) {
   text-align: right;
 }
-/* line 112, ../partials/_panel-task-action.scss */
+/* line 106, ../partials/_panel-task-action.scss */
 .order-product-row li:nth-child(n+5) {
   clear: left;
 }
-/* line 117, ../partials/_panel-task-action.scss */
+/* line 111, ../partials/_panel-task-action.scss */
 .order-product-row h3,
 .order-product-row h4 {
   font-weight: bold;
 }
-/* line 122, ../partials/_panel-task-action.scss */
+/* line 116, ../partials/_panel-task-action.scss */
 .order-product-row .product-total h4 {
   display: inline-block;
 }
-/* line 125, ../partials/_panel-task-action.scss */
+/* line 119, ../partials/_panel-task-action.scss */
 .order-product-row .product-total span {
   margin-left: 1.25%;
 }
 
-/* line 133, ../partials/_panel-task-action.scss */
+/* line 127, ../partials/_panel-task-action.scss */
 .order-list .order-product-row li {
   margin: 5px 0;
 }
 
+/* Nav Bars ----------- */
+/* Headings ----------- */
+/* Buttons ----------- */
 /* line 63, ../vendor/theme.scss */
 body {
-  background: url("../../images/backgrounds/grey_wash_wall.png") #7f7f7f;
+  background: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 70px;
   padding-bottom: 30px;
@@ -8751,34 +8782,34 @@ body {
 }
 /* line 106, ../vendor/theme.scss */
 .panel .panel-heading {
-  background: #1f1f1f;
-  border-color: #181818;
-  color: white;
+  background: white;
+  border-color: #cccccc;
+  color: black;
 }
 
-/* line 113, ../vendor/theme.scss */
+/* line 114, ../vendor/theme.scss */
 .panel-body .label, .panel-body [class^="product-adjustment"] span, [class^="product-adjustment"] .panel-body span {
   color: black;
 }
 
-/* line 125, ../vendor/theme.scss */
+/* line 126, ../vendor/theme.scss */
 .order-list .order-product-row {
   border-bottom: 1px solid black;
 }
-/* line 128, ../vendor/theme.scss */
+/* line 129, ../vendor/theme.scss */
 .order-list .order-product-row:only-child {
   border-bottom: none;
 }
-/* line 132, ../vendor/theme.scss */
+/* line 133, ../vendor/theme.scss */
 .order-list .order-product-row:nth-child(odd) {
   background: white;
 }
-/* line 136, ../vendor/theme.scss */
+/* line 137, ../vendor/theme.scss */
 .order-list .order-product-row:nth-child(even) {
   background: #bfbfbf;
 }
 
-/* line 149, ../vendor/theme.scss */
+/* line 150, ../vendor/theme.scss */
 #body-dashboard .container-task-area .panel {
   background: url("../../images/logos/conductiv-logo-full.png") no-repeat center 125px transparent;
   background-size: 100%;
@@ -8795,10 +8826,5 @@ body {
   /* line 43, ../main.scss */
   .container {
     width: 992px;
-  }
-
-  /* line 47, ../main.scss */
-  .navbar-fixed-top + .container > .row {
-    height: 624px;
   }
 }

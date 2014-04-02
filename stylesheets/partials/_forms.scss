@@ -45,7 +45,7 @@ form {
 }
 
 label {
-  @include float-fix;
+  @include overflow-fix;
   display: block;
   padding: $vert-space-small 0;
 

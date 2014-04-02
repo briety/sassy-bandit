@@ -1,8 +1,7 @@
 @import "base";
 
 .navbar-fixed-top {
-  //@extend .navbar-inverse;
-  @include navbar-theme;
+  @include navbar-theme();
   @include box-shadow(0 2px 4px rgba(0,0,0,.25));
 
   .navbar-header {
@@ -15,6 +14,7 @@
   .navbar-brand {
     font-size: 1.5em;
     font-weight: bold;
+    text-decoration: none;
   }
 }
 
@@ -41,31 +41,10 @@
     }
   }
 
-  .error-message {
-    color: $theme-white;
-    display: none;
-    height: 51px;
-    line-height: 51px;
-    position: absolute;
-    top: 0;
-    text-align: center;
-    width: 100%;
-
-    span {
-
-      font-size: 18px;
-      height: 50px;
-      line-height: 20px;
-
-      margin: 0 auto;
-    }
-
-    &.visible {
-      display: block;
-
-      ~ * {
-        display: none;
-      }
+  .col-right {
+    a {
+      color: $text-color-light;
+      line-height: 50px;
     }
   }
 

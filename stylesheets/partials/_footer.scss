@@ -2,9 +2,10 @@
 
 
 
-.navbar-fixed-bottom {
-  @include navbar-theme;
+.navbar-footer-wrap {
+  @include navbar-theme();
   @include box-shadow(0 -2px 4px rgba(0,0,0,.25));
+  @include border-radius(0);
 }
 
 .navbar-footer {
@@ -22,10 +23,6 @@
     font-size: 18px;
     line-height: 20px;
     height: 20px;
-  }
-
-  a:hover {
-    text-decoration: none;
   }
 
   .caret {
